@@ -1,0 +1,138 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "$HOME/Imagens/Wallpaper/wallhaven-72kyke.jpg",
+    "height": 9,
+    "padding": {
+      "top": 2,
+      "right": 2
+    }
+  },
+  "display": {
+    "separator": " ✦ ",
+    "color": {
+      "keys": "yellow"
+    }
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "\u001b[33m┌────────────┐ \u001b[0b"
+    },
+    {
+      "type": "os",
+      "key": "├  OS       │{#keys}",
+      "keyColor": "yellow",
+      "format": "{2}"
+    },
+    {
+      "type": "title",
+      "key": "├  User     │{#keys}",
+      "keyColor": "yellow",
+      "format": "{1}"
+    },
+    {
+      "type": "host",
+      "key": "├  Host     │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "kernel",
+      "key": "├  Kernel   │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "uptime",
+      "key": "├ 󱑀 Uptime   │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "shell",
+      "key": "├  Shell    │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[33m└────────────┘"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[33m┌────────────┐ \u001b[0b"
+    },
+    {
+      "type": "display",
+      "key": "├ 󰍹 Display  │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "wm",
+      "key": "├  DE/WM    │{#keys}",
+      "keyColor": "yellow"
+    },
+    "wmtheme",
+    "theme",
+    {
+      "type": "icons",
+      "key": "├  Icons    │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "font",
+      "key": "├  Font     │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "cursor",
+      "key": "├  Cursor   │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "terminal",
+      "key": "├  Terminal │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "terminalfont",
+      "key": "├   Font   │{#keys}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[33m└────────────┘"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[33m┌────────────┐ \u001b[0b"
+    },
+    {
+      "type": "cpu",
+      "key": "├  CPU      │{#keys}"
+    },
+    {
+      "type": "gpu",
+      "key": "├ 󰨜 GPU      │{#keys}"
+    },
+    {
+      "type": "swap",
+      "key": "├  Swap     │{#keys}"
+    },
+    {
+      "type": "disk",
+      "key": "├ 󱛟 Disk     │{#keys}"
+    },
+    "battery",
+    "poweradapter",
+    {
+      "type": "locale",
+      "key": "├  Locale   │{#keys}"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[33m└────────────┘"
+    },
+    "break",
+    "colors"
+  ]
+}

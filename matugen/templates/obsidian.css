@@ -1,0 +1,622 @@
+/* Matugen Obsidian Dynamic Colors Snippet
+ * Place output in: <vault>/.obsidian/snippets/matugen.css
+ * Then enable it in: Settings → Appearance → CSS Snippets
+ */
+
+.theme-dark,
+.theme-light {
+
+  /* ── 1. Valores RGB puros gerados pelo Matugen ──────────────────────────── */
+  --mat-bg-rgb: {
+      {
+      colors.background.default.red
+    }
+  }
+
+  ,
+  {
+    {
+    colors.background.default.green
+  }
+}
+
+,
+{
+  {
+  colors.background.default.blue
+}
+}
+
+;
+
+--mat-surface-rgb: {
+    {
+    colors.surface.default.red
+  }
+}
+
+,
+{
+  {
+  colors.surface.default.green
+}
+}
+
+,
+{
+  {
+  colors.surface.default.blue
+}
+}
+
+;
+
+--mat-on-surface-rgb: {
+    {
+    colors.on_surface.default.red
+  }
+}
+
+,
+{
+  {
+  colors.on_surface.default.green
+}
+}
+
+,
+{
+  {
+  colors.on_surface.default.blue
+}
+}
+
+;
+
+--mat-primary-rgb: {
+    {
+    colors.primary.default.red
+  }
+}
+
+,
+{
+  {
+  colors.primary.default.green
+}
+}
+
+,
+{
+  {
+  colors.primary.default.blue
+}
+}
+
+;
+
+--mat-on-primary-rgb: {
+    {
+    colors.on_primary.default.red
+  }
+}
+
+,
+{
+  {
+  colors.on_primary.default.green
+}
+}
+
+,
+{
+  {
+  colors.on_primary.default.blue
+}
+}
+
+;
+
+--background-primary: {
+    {
+    colors.background.default.hex
+  }
+}
+
+;
+
+--background-primary-alt: {
+    {
+    colors.surface_dim.default.hex
+  }
+}
+
+;
+
+--background-secondary: {
+    {
+    colors.surface_container_low.default.hex
+  }
+}
+
+;
+
+--background-secondary-alt: {
+    {
+    colors.surface_container.default.hex
+  }
+}
+
+;
+
+
+--color-base-00: {
+    {
+    colors.background.default.hex
+  }
+}
+
+;
+
+--color-base-05: {
+    {
+    colors.surface_dim.default.hex
+  }
+}
+
+;
+
+--color-base-10: {
+    {
+    colors.surface_container_lowest.default.hex
+  }
+}
+
+;
+
+--color-base-20: {
+    {
+    colors.surface_container_low.default.hex
+  }
+}
+
+;
+
+--color-base-25: {
+    {
+    colors.surface_container.default.hex
+  }
+}
+
+;
+
+--color-base-30: {
+    {
+    colors.surface_container_high.default.hex
+  }
+}
+
+;
+
+--color-base-35: {
+    {
+    colors.surface_container_highest.default.hex
+  }
+}
+
+;
+
+--color-base-40: {
+    {
+    colors.outline_variant.default.hex
+  }
+}
+
+;
+
+--color-base-50: {
+    {
+    colors.outline.default.hex
+  }
+}
+
+;
+
+--color-base-60: {
+    {
+    colors.on_surface_variant.default.hex
+  }
+}
+
+;
+
+--color-base-70: {
+    {
+    colors.on_surface.default.hex
+  }
+}
+
+;
+
+--color-base-100: {
+    {
+    colors.inverse_surface.default.hex
+  }
+}
+
+;
+
+--code-background: {
+    {
+    colors.surface_container_low.default.hex
+  }
+}
+
+;
+
+--code-normal: {
+    {
+    colors.on_surface.default.hex
+  }
+}
+
+;
+
+--code-comment: {
+    {
+    colors.outline.default.hex
+  }
+}
+
+;
+
+--code-function: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--code-important: {
+    {
+    colors.error.default.hex
+  }
+}
+
+;
+
+--code-keyword: {
+    {
+    colors.secondary.default.hex
+  }
+}
+
+;
+
+--code-operator: {
+    {
+    colors.tertiary.default.hex
+  }
+}
+
+;
+
+--code-property: {
+    {
+    colors.on_surface_variant.default.hex
+  }
+}
+
+;
+
+--code-punctuation: {
+    {
+    colors.outline_variant.default.hex
+  }
+}
+
+;
+
+--code-string: {
+    {
+    colors.tertiary.default.hex
+  }
+}
+
+;
+
+--code-tag: {
+    {
+    colors.error.default.hex
+  }
+}
+
+;
+
+--code-value: {
+    {
+    colors.secondary.default.hex
+  }
+}
+
+;
+
+--checkbox-color: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--checkbox-color-hover: {
+    {
+    colors.primary_container.default.hex
+  }
+}
+
+;
+
+--checkbox-border-color: {
+    {
+    colors.outline.default.hex
+  }
+}
+
+;
+
+--checkbox-marker-color: {
+    {
+    colors.on_primary.default.hex
+  }
+}
+
+;
+
+--graph-node: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--graph-node-unresolved: {
+    {
+    colors.outline.default.hex
+  }
+}
+
+;
+
+--graph-node-focused: {
+    {
+    colors.on_primary_container.default.hex
+  }
+}
+
+;
+
+--graph-node-tag: {
+    {
+    colors.secondary.default.hex
+  }
+}
+
+;
+
+--graph-node-attachment: {
+    {
+    colors.tertiary.default.hex
+  }
+}
+
+;
+
+--graph-line: {
+    {
+    colors.outline_variant.default.hex
+  }
+}
+
+;
+
+--graph-background: {
+    {
+    colors.background.default.hex
+  }
+}
+
+;
+
+--interactive-accent: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--titlebar-background: {
+    {
+    colors.surface_dim.default.hex
+  }
+}
+
+;
+
+--titlebar-background-focused: {
+    {
+    colors.surface_container_low.default.hex
+  }
+}
+
+;
+
+--titlebar-text-color: {
+    {
+    colors.on_surface.default.hex
+  }
+}
+
+;
+
+--background-modifier-border: {
+    {
+    colors.outline_variant.default.hex
+  }
+}
+
+;
+
+--background-modifier-border-focus: {
+    {
+    colors.outline.default.hex
+  }
+}
+
+;
+
+--background-modifier-border-hover: {
+    {
+    colors.outline.default.hex
+  }
+}
+
+;
+
+--text-accent: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--text-accent-hover: {
+    {
+    colors.primary_container.default.hex
+  }
+}
+
+;
+
+--color-red: {
+    {
+    colors.error.default.hex
+  }
+}
+
+;
+
+--color-orange: {
+    {
+    colors.tertiary.default.hex
+  }
+}
+
+;
+
+--color-yellow: {
+    {
+    colors.secondary.default.hex
+  }
+}
+
+;
+
+--color-green: {
+    {
+    colors.tertiary_container.default.hex
+  }
+}
+
+;
+
+--color-cyan: {
+    {
+    colors.secondary_container.default.hex
+  }
+}
+
+;
+
+--color-blue: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--color-purple: {
+    {
+    colors.secondary.default.hex
+  }
+}
+
+;
+
+--color-pink: {
+    {
+    colors.tertiary.default.hex
+  }
+}
+
+;
+
+/* ── 4. Títulos Dinâmicos ─────────────────────────────────────────── */
+--h1-color: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--h2-color: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+
+--h3-color: {
+    {
+    colors.secondary.default.hex
+  }
+}
+
+;
+
+--link-color: {
+    {
+    colors.primary.default.hex
+  }
+}
+
+;
+}
+
+.theme-dark {
+  --text-normal: #ffffff !important;
+  --text-muted: #b3b3b3 !important;
+}
+
+.theme-light {
+  --text-normal: #1a1a1a !important;
+  --text-muted: #666666 !important;
+}
+
+.workspace,
+.workspace-split,
+.workspace-tabs,
+.workspace-tab-container,
+.view-content,
+.markdown-source-view,
+.markdown-preview-view,
+.workspace-ribbon {
+  background-color: var(--background-primary) !important;
+}

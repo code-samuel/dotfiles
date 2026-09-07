@@ -1,0 +1,65 @@
+@import "theme.css";
+
+* {
+  font-family: "JetbrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 1px;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: @on_surface;
+  padding: 4px 6px;
+}
+
+.module {
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: @surface_container;
+  border: 1px solid @outline_variant;
+  color: @on_surface;
+}
+
+.module:hover {
+  background-color: @surface_container_highest;
+  border-color: @primary;
+}
+
+
+#workspaces button {
+  min-width: 12px;
+  min-height: 12px;
+  padding: 1px 1px;
+  margin: 2px;
+  border-radius: 20px;
+  background-color: @surface_container_high;
+  border: 1px solid @outline_variant;
+  color: @on_surface_variant;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+#workspaces button.active {
+  background-color: @primary_container;
+  border-color: @primary;
+  color: @on_primary_container;
+  transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+  background-color: @secondary_container;
+  border-color: @secondary;
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+.module>* {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+#custom-notification {
+  font-family: "JetbrainsMono Nerd Font";
+}

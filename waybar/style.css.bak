@@ -1,0 +1,68 @@
+/* fonte */
+* {
+  font-family: "JetbrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 1px;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: #cdd6f4;
+  padding: 4px 6px;
+}
+
+.module {
+  padding: 4px 10px;
+  border-radius: 10px;
+  background-color: #303446;
+  border: 1px solid rgba(13, 13, 13, 0.96);
+  color: #cdd6f4;
+}
+
+.module:hover {
+  background-color: rgba(203, 160, 247, 0.06);
+  border-color: rgba(203, 160, 247, 0.18);
+}
+
+#workspaces {
+  padding: 0 6px;
+  margin: 0;
+}
+
+#workspaces button {
+  min-width: 14px;
+  min-height: 14px;
+  padding: 2px 8px;
+  margin: 2 3px;
+  border-radius: 30px;
+  background-color: #45475a;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+/* ativo = branco */
+#workspaces button.active {
+  background-color: #0B1C2D;
+  border-color: rgba(249, 218, 37, 1);
+  color: #FFD400;
+  transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+  background-color: #cba6f7;
+  border-color: rgba(203, 160, 247, 1);
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+.module>* {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+#custom-notification {
+  font-family: "JetbrainsMono Nerd Font";
+}
