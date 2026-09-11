@@ -14,7 +14,8 @@ mapfile -d '' FILES < <(find "$DIR" -type f \( -iname "*.jpg" -o -iname "*.png" 
 SELECTED=$(
   for img in "${FILES[@]}"; do
     name=$(basename "$img")
-    printf "%s\x00icon\x1f%s\n" "$name" "$img"
+    # CORREÇÃO AQUI: adicionado o prefixo thumbnail:// para evitar o estouro de RAM
+    printf "%s\x00icon\x1fthumbnail://%s\n" "$name" "$img"
   done | rofi -dmenu -i -p "    Wallpaper" -show-icons -theme "$ROFI_THEME"
 )
 
