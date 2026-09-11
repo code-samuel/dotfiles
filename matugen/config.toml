@@ -15,6 +15,7 @@ post_hook = 'hyprctl reload'
 # input_path = '~/.config/matugen/templates/hyprland.lua'
 # output_path = '~/.config/hypr/colors.lua'
 # post_hook = 'hyprctl reload'
+
 [templates.obsidian]
 input_path = '~/.config/matugen/templates/obsidian.css'
 output_path = '/home/kotei/Documentos/Cofres/Alexandria/.obsidian/snippets/obsidian.css'
