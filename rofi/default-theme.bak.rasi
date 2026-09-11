@@ -12,12 +12,11 @@ configuration {
 @theme "~/.config/rofi/theme.rasi"
 
 window {
-  transparency:                "real";
-	background-color:               transparent;            
+	background-color:               @surface-container-lowest;
 	text-color:                     #ffffff;               
 	border-radius:                  7px;
-	width:			    	20%;
-	padding: 			6px;
+	width:			    	25%;
+	padding: 			8px;
 }
 
 prompt {
@@ -25,7 +24,7 @@ prompt {
 	text-color:                     #ffffff;            
 	enabled:			true;
 	padding:			0.5% 32px 0% -0.5%;
-	font:				"JetBrainsMono Nerd Font 12";
+	font:				"JetBrainsMono Nerd Font 10";
 }
 
 entry {
@@ -44,60 +43,53 @@ inputbar {
 	expand:                         false;
 	border-radius:                  6px;
 	margin:                         0%;
-	padding:                        8px;
-  border:                      1px;
-  border-color:                rgba(255, 255, 255, 0.55);
-  border-radius:               12px;
+	padding:                        10px;
 }
 
 listview {
 	background-color:               transparent;
-	columns:                        1;
-	lines:	                        5;
+	columns:                        3;
+	lines:	                        3;
 	cycle:                          false;
 	dynamic:                        true;
 	layout:                         vertical;
 }
 
 mainbox {
-  background-color:            rgba(1, 1, 1, 0.4);
+	background-color:               transparent;
 	children:                       [ inputbar, listview ];
 	spacing:                       	2%;
 	padding:                        2% 1% 2% 1%;
-  border:                         1px;
-  border-color:                   @primary;
-  border-radius:                  12px;
 }
 
 element {
-  background-color:            rgba(1, 1, 1, 0.1);
-	text-color:                     #dddddd;
-	orientation:                    horizontal;
-  padding:                        6px 12px;
-  margin:                         3px;
-  border:                         1px;
-  border-color:                   @primary;
-  border-radius:                  12px;
+	background-color:               transparent;
+	text-color:                     #dddddd;   
+	orientation:                    vertical;
+	padding:                        2% 0% 2% 0%;
 }
 
 element-icon {
 	background-color:               transparent;
-	size:                           30px;
+	size:                           40px;
 	horizontal-align:	 	0.5;
 }
 
 element-text {
 	background-color:               transparent;
 	expand:                         true;
+	horizontal-align:               0.5;
+	vertical-align:                 0.5;
 	margin:                         0.5% 0.5% -0.5% 0.5%;
 }
 
 element-text, element-icon {
+	background-color:		inherit;
 	text-color:			inherit;
 }
 
 element selected {
-	background-color:               @inverse-primary;
-	text-color:                     #ffffff;
+	background-color:               @primary;
+	text-color:                     #000000;
 	border-radius:                  6px;
 }
