@@ -1,0 +1,11 @@
+[00:36:15 2026-09-11] FETCHING Version 2.45.0
+[00:36:15 2026-09-11] CREATING /home/kotei/.spicetify
+[00:36:15 2026-09-11] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.45.0/spicetify-2.45.0-linux-amd64.tar.gz
+[00:36:19 2026-09-11] EXTRACTING /home/kotei/.spicetify/spicetify.tar.gz
+[00:36:19 2026-09-11] SETTING EXECUTABLE PERMISSIONS TO /home/kotei/.spicetify/spicetify
+[00:36:19 2026-09-11] REMOVING /home/kotei/.spicetify/spicetify.tar.gz
+[00:36:19 2026-09-11] APPENDING /home/kotei/.spicetify to PATH in /home/kotei/.zshrc
+[00:36:19 2026-09-11] spicetify v2.45.0 was installed successfully to /home/kotei/.spicetify
+[00:36:19 2026-09-11] Open a new terminal or reload your shell profile to use spicetify:
+[00:36:19 2026-09-11]   source "/home/kotei/.zshrc"
+[00:36:19 2026-09-11] Then run 'spicetify --help' to get started
