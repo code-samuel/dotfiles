@@ -10,6 +10,7 @@ configuration {
 
 @theme "/dev/null"
 @theme "~/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/default-theme.rasi"
 
 * {
 	bg:				@surface-container-lowest; 
@@ -56,6 +57,7 @@ mainbox {
 }
 
 element {
+      border:                         1px;
     	orientation:                    vertical;
     	padding:                        2% 0% 2% 0%;
 }
@@ -73,7 +75,6 @@ element-text {
 }
 
 element-text, element-icon {
-	background-color:		inherit;
 	text-color:			inherit;
 }
 

@@ -1,6 +1,6 @@
 configuration {
 	modi:				"drun";
-	font:				"JetBrainsMono Nerd Font 10";
+	font:				"JetBrainsMono Nerd Font 11";
 	show-icons:                     true;
 	icon-theme: 			"Reversal-dark";
 	display-drun: 			"";
@@ -33,7 +33,6 @@ entry {
 	text-color:                     #ffffff;        
 	placeholder:			"Search";
 	placeholder-color:              #a0a0a0;     
-	font:				"JetBrainsMono Nerd Font 10";
 	expand:                         true;
 	padding:                        0.5% 0% 0% 0%;
 }
@@ -41,8 +40,7 @@ entry {
 inputbar {
 	background-color:               @surface-container;
 	children:			[ prompt, entry ];
-	expand:                         false;
-	border-radius:                  6px;
+	expand:                         false; border-radius:                  6px;
 	margin:                         0%;
 	padding:                        8px;
   border:                      1px;
