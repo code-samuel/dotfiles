@@ -16,12 +16,40 @@ window {
 	background-color:               transparent;            
 	text-color:                     #ffffff;               
 	border-radius:                  7px;
-	width:			    	20%;
-	padding: 			6px;
+	width:                          25%;
 }
 
+
+topbox {
+    expand:                       false;
+    orientation:                  vertical;
+    children:                     [ inputbar ];
+    padding:                      50px;
+    background-image:             url("~/.config/Assets/current_anime.png", WIDTH);
+    background-position:          center;
+    border-radius:                12px 12px 0px 0px;
+}
+
+contentbox {
+    expand:                       true;
+	background-color:               transparent;
+	orientation:                    vertical;
+	children:                       [ listview ];
+	padding:                        6px 12px 10px 12px;
+}
+mainbox {
+  background-color:            rgba(15, 15, 20, 0.75);
+  orientation:                 vertical;
+	children:                    [ topbox, contentbox ];
+	padding:                     0px;
+  border:                      1px;
+  border-color:                @primary;
+  border-radius:                  12px;
+}
+
+
 prompt {
-	background-color:               @surface-container;            
+	background-color:               transparent;            
 	text-color:                     #ffffff;            
 	enabled:			true;
 	padding:			0.5% 32px 0% -0.5%;
@@ -29,22 +57,23 @@ prompt {
 }
 
 entry {
-	background-color:               @surface-container;
+	background-color:               transparent;
 	text-color:                     #ffffff;        
 	placeholder:			"Search";
-	placeholder-color:              #a0a0a0;     
+	placeholder-color:              #cccccc;     
 	expand:                         true;
 	padding:                        0.5% 0% 0% 0%;
 }
 
 inputbar {
-	background-color:               @surface-container;
+	background-color:               rgba(10, 10, 15, 0.55); 
 	children:			[ prompt, entry ];
-	expand:                         false; border-radius:                  6px;
+	expand:                         false; 
+	border-radius:                  6px;
 	margin:                         0%;
 	padding:                        8px;
   border:                      1px;
-  border-color:                rgba(255, 255, 255, 0.55);
+  border-color:                rgba(255, 255, 255, 0.35);
   border-radius:               12px;
 }
 
@@ -55,16 +84,6 @@ listview {
 	cycle:                          false;
 	dynamic:                        true;
 	layout:                         vertical;
-}
-
-mainbox {
-  background-color:            rgba(1, 1, 1, 0.5);
-	children:                       [ inputbar, listview ];
-	spacing:                       	2%;
-	padding:                        2% 1% 2% 1%;
-  border:                         1px;
-  border-color:                   @primary;
-  border-radius:                  12px;
 }
 
 element {
