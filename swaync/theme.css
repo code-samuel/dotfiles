@@ -1,13 +1,13 @@
-@define-color cc-bg #111418;
-@define-color cc-mantle #e1e2e8;
-@define-color cc-crust #191c20;
+@define-color cc-bg #0f1513;
+@define-color cc-mantle #dee4e0;
+@define-color cc-crust #171d1b;
 
-@define-color noti-bg #111418;
-@define-color noti-bg-alt #e1e2e8;
+@define-color noti-bg #0f1513;
+@define-color noti-bg-alt #dee4e0;
 
-@define-color text-main #00325a;
-@define-color text-sub #e1e2e8;
+@define-color text-main #00382d;
+@define-color text-sub #dee4e0;
 
-@define-color accent #1c4975;
-@define-color accent-alt #c3c6cf;
-@define-color border-color #a2c9fd;
+@define-color accent #005142;
+@define-color accent-alt #bfc9c4;
+@define-color border-color #86d6bf;
