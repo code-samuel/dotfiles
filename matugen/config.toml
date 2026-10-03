@@ -42,3 +42,4 @@ output_path = '/home/kotei/Documentos/Cofres/Alexandria/.obsidian/snippets/obsid
 input_path = '~/.config/matugen/templates/spicetify.ini'
 output_path = '~/.config/spicetify/Themes/Sleek/color.ini'
 post_hook = 'pgrep -x spicetify > /dev/null || spicetify apply -n'
+
