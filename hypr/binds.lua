@@ -1,7 +1,19 @@
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- KEYBOARD CONFIGURATION && RELATED                     --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+---------------------
+-- Variables
+---------------------
+
 local mainMod = "SUPER"
 terminal = "kitty"
 local menu = "rofi"
 local filemanager = "nemo"
+
+---------------------
+-- Input
+---------------------
 
 hl.config({
 	input = {
@@ -10,21 +22,37 @@ hl.config({
 		kb_model = "intl",
 		kb_options = "",
 		kb_rules = "",
-
 		repeat_rate = 20,
 		repeat_delay = 350,
 		follow_mouse = 1,
-		accel_profile = flat,
+		accel_profile = "flat",
 		sensitivity = 0,
 	},
 })
 
-hl.bind(mainMod .. "+ R", hl.dsp.exec_cmd("pkill rofi || rofi -show drun"), { release = true })
+---------------------
+-- Binds
+---------------------
+
+local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+hl.bind(mainMod .. "+ R", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. "+ D", hl.dsp.exec_cmd(filemanager))
-hl.bind(mainMod .. "+ T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. "+ Return", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. "+ N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. "+ M", hl.dsp.exec_cmd("power-menu.sh &"))
 hl.bind(mainMod .. "+ W", hl.dsp.exec_cmd("select-wallpaper.sh &"))
-local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+hl.bind(
+	mainMod .. " + SHIFT + S",
+	hl.dsp.exec_cmd(
+		[[bash -c 'GEOM=$(slurp) && sleep 0.2 && (pw-play /usr/share/sounds/freedesktop/stereo/camera-shutter.oga &) && grim -g "$GEOM" - | satty -f -']]
+	)
+)
+-- safe screenshot bind
+-- hl.bind(
+-- mainMod .. " + SHIFT + S",
+-- hl.dsp.exec_cmd([[bash -c 'GEOM=$(slurp) && sleep 0.2 && grim -g "$GEOM" - | satty -f -']])
+-- )
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
@@ -36,7 +64,10 @@ hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 
+---------------------
 -- Workspaces
+---------------------
+
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
@@ -46,7 +77,10 @@ end
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
+---------------------
 -- Windows
+---------------------
+
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 

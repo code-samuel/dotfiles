@@ -1,0 +1,103 @@
+return {
+	image = "/home/kotei/.config/Assets/Wallpapers/japan_landscape.png",
+
+	background = "0xff181115",
+
+	error = "0xffffb4ab",
+
+	error_container = "0xff93000a",
+
+	inverse_on_surface = "0xff362e32",
+
+	inverse_primary = "0xff864b70",
+
+	inverse_surface = "0xffeddfe4",
+
+	on_background = "0xffeddfe4",
+
+	on_error = "0xff690005",
+
+	on_error_container = "0xffffdad6",
+
+	on_primary = "0xff501e40",
+
+	on_primary_container = "0xffffd8ec",
+
+	on_primary_fixed = "0xff37072a",
+
+	on_primary_fixed_variant = "0xff6a3457",
+
+	on_secondary = "0xff3f2a36",
+
+	on_secondary_container = "0xfffbd9ea",
+
+	on_secondary_fixed = "0xff291521",
+
+	on_secondary_fixed_variant = "0xff57404d",
+
+	on_surface = "0xffeddfe4",
+
+	on_surface_variant = "0xffd3c2c9",
+
+	on_tertiary = "0xff4b2714",
+
+	on_tertiary_container = "0xffffdbcb",
+
+	on_tertiary_fixed = "0xff311303",
+
+	on_tertiary_fixed_variant = "0xff653d28",
+
+	outline = "0xff9c8d93",
+
+	outline_variant = "0xff4f4349",
+
+	primary = "0xfff9b1db",
+
+	primary_container = "0xff6a3457",
+
+	primary_fixed = "0xffffd8ec",
+
+	primary_fixed_dim = "0xfff9b1db",
+
+	scrim = "0xff000000",
+
+	secondary = "0xffdebece",
+
+	secondary_container = "0xff57404d",
+
+	secondary_fixed = "0xfffbd9ea",
+
+	secondary_fixed_dim = "0xffdebece",
+
+	shadow = "0xff000000",
+
+	source_color = "0xffb97ca0",
+
+	surface = "0xff181115",
+
+	surface_bright = "0xff3f373b",
+
+	surface_container = "0xff251e21",
+
+	surface_container_high = "0xff30282c",
+
+	surface_container_highest = "0xff3b3236",
+
+	surface_container_low = "0xff211a1d",
+
+	surface_container_lowest = "0xff130c10",
+
+	surface_dim = "0xff181115",
+
+	surface_tint = "0xfff9b1db",
+
+	surface_variant = "0xff4f4349",
+
+	tertiary = "0xfff4ba9e",
+
+	tertiary_container = "0xff653d28",
+
+	tertiary_fixed = "0xffffdbcb",
+
+	tertiary_fixed_dim = "0xfff4ba9e",
+}

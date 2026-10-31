@@ -6,8 +6,8 @@ output_path = '~/.config/kitty/matugen-colors.conf'
 post_hook = 'kill -SIGUSR1 $(pgrep kitty)'
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland.conf'
-output_path = '~/.config/hypr/matugen-colors.conf'
+input_path = '~/.config/matugen/templates/hyprland.lua'
+output_path = '~/.config/hypr/colors.lua'
 post_hook = 'hyprctl reload'
 
 # [templates.hyprland]
