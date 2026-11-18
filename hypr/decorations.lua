@@ -21,7 +21,7 @@ hl.config({
 	dwindle = { preserve_split = true },
 
 	decoration = {
-		active_opacity = 1,
+		active_opacity = 0.95,
 		inactive_opacity = 0.85,
 		fullscreen_opacity = 1,
 
