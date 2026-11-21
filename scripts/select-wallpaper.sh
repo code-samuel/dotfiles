@@ -29,11 +29,15 @@ if [[ "${WALL,,}" == *.gif ]]; then
 else
   awww img "$WALL" \
     --transition-type grow \
-    --transition-duration 0.8 \
+    --transition-duration 0.5 \
     --transition-fps 60 &
 fi
 
-matugen image "$WALL" --source-color-index 0 -t scheme-tonal-spot &
+(
+  magick "$WALL[0]" -sample 128x128 /tmp/matugen_fast.png &&
+    sleep 0.25 &&
+    matugen image /tmp/matugen_fast.png --source-color-index 0 -t scheme-tonal-spot
+) &
 
 (
   SELECTED_ANIME=$(find "$ANIME_FOLDER" -type f | shuf -n 1)
@@ -48,5 +52,3 @@ matugen image "$WALL" --source-color-index 0 -t scheme-tonal-spot &
     ln -sf "$CACHED_ANIME" "$HOME/.config/Assets/current_anime.png"
   fi
 ) &
-
-wait
