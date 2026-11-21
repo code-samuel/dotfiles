@@ -4,6 +4,7 @@ DIR="$HOME/.config/Assets/Wallpapers"
 CACHE="$HOME/.cache/current_wallpaper"
 ROFI_THEME="$HOME/.config/rofi/wallpaper.rasi"
 ANIME_FOLDER="$HOME/.config/Assets/Anime_icons"
+ANIME_CACHE_DIR="$HOME/.cache/anime_thumbs"
 
 if ! pgrep -x "awww-daemon" >/dev/null; then
   awww-daemon &
@@ -14,8 +15,7 @@ mapfile -d '' FILES < <(find "$DIR" -type f \( -iname "*.jpg" -o -iname "*.png" 
 
 SELECTED=$(
   for img in "${FILES[@]}"; do
-    name=$(basename "$img")
-    printf "%s\x00icon\x1fthumbnail://%s\n" "$name" "$img"
+    printf "%s\x00icon\x1fthumbnail://%s\n" "${img#"$DIR"/}" "$img"
   done | rofi -dmenu -i -p "    Wallpaper" -show-icons -theme "$ROFI_THEME"
 )
 
@@ -24,15 +24,29 @@ SELECTED=$(
 WALL="$DIR/$SELECTED"
 echo "$WALL" >"$CACHE"
 
-# 4. Aplicação Inteligente
 if [[ "${WALL,,}" == *.gif ]]; then
-  awww img "$WALL" --transition-type none
+  awww img "$WALL" --transition-type none &
 else
   awww img "$WALL" \
     --transition-type grow \
-    --transition-duration 1 \
-    --transition-fps 60
+    --transition-duration 0.8 \
+    --transition-fps 60 &
 fi
-matugen image "$WALL" --source-color-index 0 -t scheme-tonal-spot
 
-ln -sf "$(find "$ANIME_FOLDER" -type f | shuf -n 1)" "$HOME/.config/Assets/current_anime.png"
+matugen image "$WALL" --source-color-index 0 -t scheme-tonal-spot &
+
+(
+  SELECTED_ANIME=$(find "$ANIME_FOLDER" -type f | shuf -n 1)
+  if [ -n "$SELECTED_ANIME" ]; then
+    mkdir -p "$ANIME_CACHE_DIR"
+    CACHED_ANIME="$ANIME_CACHE_DIR/${SELECTED_ANIME##*/}.png"
+
+    if [ ! -f "$CACHED_ANIME" ]; then
+      magick "$SELECTED_ANIME" -thumbnail 500x -define png:compression-level=1 "$CACHED_ANIME"
+    fi
+
+    ln -sf "$CACHED_ANIME" "$HOME/.config/Assets/current_anime.png"
+  fi
+) &
+
+wait
