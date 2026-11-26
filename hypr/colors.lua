@@ -1,7 +1,7 @@
 return {
-    image = "/home/kotei/.config/Assets/Wallpapers/catpuccin_woman.png",
+    image = "/tmp/matugen_fast.png",
 
-    background = "0xff131318",
+    background = "0xff141318",
 
     error = "0xffffb4ab",
 
@@ -9,7 +9,7 @@ return {
 
     inverse_on_surface = "0xff313036",
 
-    inverse_primary = "0xff5c5891",
+    inverse_primary = "0xff5e5791",
 
     inverse_surface = "0xffe5e1e9",
 
@@ -19,17 +19,17 @@ return {
 
     on_error_container = "0xffffdad6",
 
-    on_primary = "0xff2e2960",
+    on_primary = "0xff2f295f",
 
     on_primary_container = "0xffe4dfff",
 
-    on_primary_fixed = "0xff18124a",
+    on_primary_fixed = "0xff1a1249",
 
-    on_primary_fixed_variant = "0xff444078",
+    on_primary_fixed_variant = "0xff463f77",
 
     on_secondary = "0xff302e41",
 
-    on_secondary_container = "0xffe4dff9",
+    on_secondary_container = "0xffe5dff9",
 
     on_secondary_fixed = "0xff1b192c",
 
@@ -37,27 +37,27 @@ return {
 
     on_surface = "0xffe5e1e9",
 
-    on_surface_variant = "0xffc8c5d0",
+    on_surface_variant = "0xffc9c5d0",
 
     on_tertiary = "0xff482537",
 
     on_tertiary_container = "0xffffd8e8",
 
-    on_tertiary_fixed = "0xff2f1122",
+    on_tertiary_fixed = "0xff301121",
 
-    on_tertiary_fixed_variant = "0xff613b4e",
+    on_tertiary_fixed_variant = "0xff613b4d",
 
     outline = "0xff928f99",
 
     outline_variant = "0xff47464f",
 
-    primary = "0xffc6c0ff",
+    primary = "0xffc7bfff",
 
-    primary_container = "0xff444078",
+    primary_container = "0xff463f77",
 
     primary_fixed = "0xffe4dfff",
 
-    primary_fixed_dim = "0xffc6c0ff",
+    primary_fixed_dim = "0xffc7bfff",
 
     scrim = "0xff000000",
 
@@ -65,17 +65,17 @@ return {
 
     secondary_container = "0xff474459",
 
-    secondary_fixed = "0xffe4dff9",
+    secondary_fixed = "0xffe5dff9",
 
     secondary_fixed_dim = "0xffc8c3dc",
 
     shadow = "0xff000000",
 
-    source_color = "0xff8b8899",
+    source_color = "0xffa6a0cf",
 
-    surface = "0xff131318",
+    surface = "0xff141318",
 
-    surface_bright = "0xff3a383f",
+    surface_bright = "0xff3a383e",
 
     surface_container = "0xff201f25",
 
@@ -87,19 +87,19 @@ return {
 
     surface_container_lowest = "0xff0e0e13",
 
-    surface_dim = "0xff131318",
+    surface_dim = "0xff141318",
 
-    surface_tint = "0xffc6c0ff",
+    surface_tint = "0xffc7bfff",
 
     surface_variant = "0xff47464f",
 
-    tertiary = "0xffebb8cf",
+    tertiary = "0xffecb8ce",
 
-    tertiary_container = "0xff613b4e",
+    tertiary_container = "0xff613b4d",
 
     tertiary_fixed = "0xffffd8e8",
 
-    tertiary_fixed_dim = "0xffebb8cf",
+    tertiary_fixed_dim = "0xffecb8ce",
 
 }
 

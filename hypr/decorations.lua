@@ -1,3 +1,9 @@
+local colors = dofile(os.getenv("HOME") .. "/.config/hypr/colors.lua")
+
+local function with_alpha(hex, alpha)
+	return hex:gsub("^0xff", "0x" .. alpha)
+end
+
 hl.config({
 
 	animations = {
@@ -5,7 +11,7 @@ hl.config({
 	},
 	general = {
 		gaps_in = 5,
-		gaps_out = 15,
+		gaps_out = 10,
 
 		resize_on_border = true,
 		border_size = 1,
@@ -14,7 +20,8 @@ hl.config({
 		layout = "dwindle",
 
 		col = {
-			inactive_border = "rgba(595959aa)",
+			active_border = colors.primary,
+			inactive_border = with_alpha(colors.outline_variant, "aa"),
 		},
 	},
 
@@ -29,11 +36,10 @@ hl.config({
 			enabled = true,
 			range = 5,
 			render_power = 2,
-			color = 0xee15191c,
+			color = with_alpha(colors.shadow, "ee"),
 		},
 
 		blur = {
-
 			enabled = true,
 			size = 3,
 			passes = 1,
@@ -42,23 +48,4 @@ hl.config({
 			xray = true,
 		},
 	},
-})
-
--- windows rules
-hl.window_rule({
-	name = "force-satty-floating",
-	match = {
-		class = "com.gabm.satty", -- ou apenas "satty" dependendo de como o app se registra
-	},
-	float = true,
-	center = true, -- Opcional: força ele a abrir centralizado na tela
-})
--- layer rules
-hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
-
-local rofiBlur = hl.layer_rule({
-	name = "rofi-blur",
-	match = { namespace = "rofi" },
-	blur = true,
-	animation = "slide",
 })
